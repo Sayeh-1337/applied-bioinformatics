@@ -1,10 +1,4 @@
-
-
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
+# Simple Python Script for First Day
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -37,12 +31,15 @@ def complement2(seq):
         seq1 = seq1.translate(trans)
         print(seq1)
 
+# Reverse complement Funion
 def rev_complement(seq):
     trans = ""
     trans = trans.maketrans("ACGT", "TGCA")
     for seq1 in seq:
         seq1 = seq1.translate(trans)[::-1]
         print(seq1)
+
+#Main -> Starting point of the program
 if __name__ == '__main__':
     #counter=0
     # while counter < 10:
@@ -50,12 +47,12 @@ if __name__ == '__main__':
     #     print(counter)
     #     counter += 1
     #print_hi('My Name Muhammad ')
-    seq = readfile()
+    seq = readfile() # Read sequence from file and print it
     print("\n")
-    complimant(seq)
+    complimant(seq) #not the best complement function is totally wrong
     print("\n")
-    complement2(seq)
+    complement2(seq) #best implementation with good performance
     print("\n")
-    rev_complement(seq)
+    rev_complement(seq) #best reverse complement impelmentation with good performance
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+### End of file
